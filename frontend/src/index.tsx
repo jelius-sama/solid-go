@@ -4,6 +4,7 @@ import { render } from 'solid-js/web';
 import { JSX } from 'solid-js';
 import { A, Router } from '@solidjs/router';
 import { routes } from '@/routes';
+import Title from '@/components/layout/title';
 
 const root = document.getElementById('root');
 
@@ -27,6 +28,18 @@ const App = ({ children }: { children: JSX.Element }) => {
 }
 
 render(
-  () => <Router root={(props) => <App>{props.children}</App>}>{routes}</Router>,
+  () => (
+    <Router
+      root={(props) =>
+        <>
+          <Title />
+          <App>
+            {props.children}
+          </App>
+        </>
+      }>
+      {routes}
+    </Router>
+  ),
   root,
 );

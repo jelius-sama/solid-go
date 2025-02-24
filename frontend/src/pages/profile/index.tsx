@@ -1,12 +1,14 @@
-import { createEffect, Suspense } from 'solid-js';
+import { createEffect, createRenderEffect, Suspense } from 'solid-js';
 import ProfileData from '@/pages/profile/profile.data';
+import { title } from '@/components/layout/title';
 
 export default function ProfilePage() {
     const name = ProfileData();
+    const [_, setTitle] = title;
 
-    createEffect(() => {
-        console.log(name());
-    });
+    createRenderEffect(() => {
+        setTitle("Profile | Solid + Go")
+    })
 
     return (
         <section class="bg-pink-100 text-gray-700 p-8">
