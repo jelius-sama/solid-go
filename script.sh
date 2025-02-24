@@ -39,7 +39,7 @@ case "$1" in
     ;;
   *)
     echo "❌ Unknown command: $1"
-    echo "Usage: $0 {build|run|clean}"
+    echo "Usage: $0 {build|dev|start|clean}"
     exit 1
     ;;
 esac
