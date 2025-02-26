@@ -1,13 +1,11 @@
-import { title } from "@/components/layout/title";
-import { createRenderEffect } from "solid-js";
+import Title from "@/components/title"
 
 export default function NotFoundPage() {
-    const [_, setTitle] = title;
-    createRenderEffect(() => {
-        setTitle("Not Found | Solid + Go")
-    })
 
     return (
-        <div>404 - Found Not Page</div>
+        <>
+            <Title>Page not found</Title>
+            <div>404 - Found Not Page</div>
+        </>
     )
 }

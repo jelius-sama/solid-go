@@ -23,9 +23,6 @@ func GenerateHTML(template HTMLTemplate) string {
 				<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09090B">
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=contain">
 				<meta name="format-detection" content="telephone=no" />
-
-				<link rel="icon" href="/static/assets/icon.png" />
-				<link rel="apple-touch-icon" href="/static/assets/icon.png" />
 				
 				%s
 			</head>
@@ -41,6 +38,13 @@ func GenerateHTML(template HTMLTemplate) string {
 			<!DOCTYPE html>
 			<html lang="en">
 			<head>
+				<meta charset="utf-8" />
+				<meta name="description" content="Discover, share, and support art like never before. A vibrant platform for artists and enthusiasts." />
+				<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+				<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09090B">
+				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=contain">
+				<meta name="format-detection" content="telephone=no" />
+				
 				%s
 				%s
 			</head>

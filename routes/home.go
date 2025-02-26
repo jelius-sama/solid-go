@@ -15,7 +15,7 @@ func HomeRoute(w http.ResponseWriter, r *http.Request) {
 			<div id="root"></div>
 		`,
 		Head: `
-			<title>Home | Solid + Go</title>
+			<title id="__server__">Home - Solid + Go</title>
 		`,
 	}))
 }

@@ -41,7 +41,9 @@ func InitRouter(distFS fs.FS) *Router {
 
 	router.Handle("/", HomeRoute)
 	router.Handle("/profile", ProfileRoute)
+	router.Handle("/profile/props", ProfileRouteProps)
 	router.Handle("/settings", SettingsRoute)
+	router.Handle("/settings/props", SettingsRouteProps)
 
 	return router
 }
