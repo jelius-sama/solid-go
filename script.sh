@@ -17,7 +17,8 @@ case "$1" in
 
     echo "🔨 Building Backend..."
     cd .. || exit
-    GOOS=linux GOARCH=amd64 go build -ldflags "-X 'solid-go/utils.ENV=prod' -X 'solid-go/utils.PORT=5000'" -o "$BUILD_OUTPUT" "$SRC_FILE"
+    GOOS=linux GOARCH=amd64 go build -gcflags "all=-B" -ldflags "-X 'solid-go/utils.ENV=prod' -X 'solid-go/utils.PORT=5000' -s -w" -o "$BUILD_OUTPUT" "$SRC_FILE"
+    upx --best --lzma "$BUILD_OUTPUT"
     echo "✅ Backend build complete: $BUILD_OUTPUT"
     ;;
   dev)
