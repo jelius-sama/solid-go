@@ -34,7 +34,16 @@ func SettingsRouteProps(w http.ResponseWriter, r *http.Request) {
 		"body": map[string]any{
 			"id": "root",
 			"children": []map[string]any{
-				{"tag": "ol", "id": "__server__", "children": []string{"Apples", "Bananas", "Strawberries", "Pineapples"}},
+				{
+					"tag": "ol",
+					"id":  "__server__",
+					"children": []map[string]any{
+						{"tag": "li", "children": "Apples"},
+						{"tag": "li", "children": "Bananas"},
+						{"tag": "li", "children": "Strawberries"},
+						{"tag": "li", "children": "Pineapples"},
+					},
+				},
 			},
 		},
 		"head": map[string]any{
